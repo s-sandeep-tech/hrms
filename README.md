@@ -1,21 +1,24 @@
-# 📱 HRMS Android Application
+# 📱 ERPNext HRMS Mobile Extension (HRMS App)
 
-An Android-based Human Resource Management System (HRMS) designed to manage employee profiles, leave requests, attendance tracking, and other core HR operations.  
-This project is built using **Kotlin**, **Material Design 3**, and **ViewBinding** for a clean, modern, and scalable architecture.
+An Android mobile application designed to **extend the functionalities of ERPNext HRMS**, enabling employees and managers to access HR features directly from their mobile devices.  
+The app enhances ERPNext’s core HR modules by providing **a modern Material Design interface**, **real-time data sync**, and **offline-ready views** for attendance, leave, and employee profile management.
 
 ---
 
 ## 🏗️ Project Overview
 
-**Modules currently implemented:**
+This mobile application acts as a **frontend extension layer** for ERPNext HRMS.  
+It connects to ERPNext backend APIs to deliver essential employee self-service and manager features through a responsive, user-friendly mobile experience.
 
-| Module | Description |
-|--------|--------------|
-| **Login & Dashboard** | Provides authentication and navigation to core HR features. |
-| **Leave Request** | Allows employees to apply for leave, attach documents, and calculate total days automatically. |
-| **Leave Summary** | Displays a summary of approved, pending, and rejected leave requests. |
-| **Attendance List** | Monthly calendar view with color-coded attendance markers (Present, Absent, Late, Holiday). |
-| **Profile Page** | Displays personal, contact, and job details with an editable profile layout. |
+### 🔹 Core Modules Implemented
+
+| Module | Description | ERPNext Link |
+|--------|--------------|--------------|
+| **Login & Dashboard** | Authenticates ERPNext users and provides quick access to HR modules. | `/api/method/login` |
+| **Leave Request** | Create and manage leave applications with attachment support. | `/api/resource/Leave Application` |
+| **Leave Summary** | Fetch and display ERPNext leave balances and approvals. | `/api/resource/Leave Allocation` |
+| **Attendance List** | View daily attendance with color-coded markers. | `/api/resource/Attendance` |
+| **Profile Page** | Displays ERPNext employee details — personal, contact, and job data. | `/api/resource/Employee` |
 
 ---
 
@@ -23,11 +26,12 @@ This project is built using **Kotlin**, **Material Design 3**, and **ViewBinding
 
 - **Language:** Kotlin  
 - **Framework:** Android SDK (Jetpack Components)
-- **UI Framework:** Material Design 3 (M3 Components)
-- **Architecture:** MVVM (Modular, ViewBinding-based)
+- **UI Framework:** Material Design 3 (Material Components)
+- **Architecture:** MVVM + Repository pattern (API-integrated)
+- **Data Binding:** ViewBinding
+- **API Integration:** Retrofit + JSON Parsing (ERPNext REST APIs)
 - **Minimum SDK:** 26  
 - **Target SDK:** 34  
-- **Build Tool:** Gradle  
 - **IDE:** Android Studio Koala (or later)
 
 ---
@@ -36,5 +40,5 @@ This project is built using **Kotlin**, **Material Design 3**, and **ViewBinding
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/your-org/hrms-android.git
-cd hrms-android
+git clone https://github.com/your-org/erpnext-hrms-mobile.git
+cd erpnext-hrms-mobile
