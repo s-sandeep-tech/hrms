@@ -40,5 +40,5 @@ It connects to ERPNext backend APIs to deliver essential employee self-service a
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/your-org/erpnext-hrms-mobile.git
-cd erpnext-hrms-mobile
+git clone https://github.com/s-sandeep-tech/hrms.git
+cd hrms
